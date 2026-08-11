@@ -48,33 +48,38 @@ function PuzzlePage() {
             <SwapPuzzle onSolved={handleSolved} />
           </>
         ) : (
-          <section className="animate-pop card-soft rounded-3xl border-4 border-card bg-card/90 p-6 text-center backdrop-blur">
-            <img
-              src={puzzleImage}
-              alt="Illustration of a couple watching the sunset beneath a blossoming tree"
-              width={1024}
-              height={1024}
-              className="mx-auto mb-6 w-full rounded-2xl"
-            />
-            <p className="text-xs uppercase tracking-[0.35em] text-muted-foreground">
-              Puzzle complete
-            </p>
-            <h2 className="mt-3 text-4xl leading-tight text-foreground">
-              Happy 2nd Month Anniversary, my love
-            </h2>
-            <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
+          <section className="animate-pop card-soft rounded-3xl border-4 border-card bg-card/90 p-5 text-center backdrop-blur">
+            <div className="relative mx-auto aspect-square w-full max-w-[22rem] overflow-hidden rounded-[2rem] border-4 border-card shadow-[var(--shadow-soft)]">
+              <img
+                src={puzzleImage}
+                alt="Completed illustration of a couple watching the sunset beneath a blossoming tree"
+                width={1024}
+                height={1024}
+                className="h-full w-full object-cover"
+              />
+              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent p-5 pt-16">
+                <p className="text-xs uppercase tracking-[0.35em] text-white/80">
+                  Puzzle complete
+                </p>
+                <h2 className="mt-2 text-2xl leading-tight text-white">
+                  Happy 2nd Month Anniversary, my love
+                </h2>
+              </div>
+            </div>
+
+            <p className="mt-5 text-sm leading-relaxed text-muted-foreground">
               Two months of shared mornings, of your laugh filling quiet rooms, of
               building a home out of small ordinary days. Like this picture, every
               piece of my life makes sense only when it's next to you.
             </p>
-            <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
+            <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
               Here's to countless sunsets on our own little hill — I'd solve a
               thousand puzzles to keep finding you at the end of each one.
             </p>
-            <p className="mt-6 text-2xl text-accent-foreground">Forever yours 🌸</p>
+            <p className="mt-5 text-2xl text-accent-foreground">Forever yours 🌸</p>
             <button
               onClick={() => setSolved(false)}
-              className="mt-6 rounded-full bg-primary px-5 py-2.5 text-sm text-primary-foreground shadow-[var(--shadow-soft)] transition-opacity hover:opacity-90"
+              className="mt-5 rounded-full bg-primary px-5 py-2.5 text-sm text-primary-foreground shadow-[var(--shadow-soft)] transition-opacity hover:opacity-90"
             >
               Play again
             </button>
