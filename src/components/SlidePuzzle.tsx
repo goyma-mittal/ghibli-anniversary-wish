@@ -8,7 +8,7 @@ function isSolvable(order: number[]) {
   let inv = 0;
   const arr = order.filter((n) => n !== TILES - 1);
   for (let i = 0; i < arr.length; i++)
-    for (let j = i + 1; j < arr.length; j++) if (arr[i] > arr[j]) inv++;
+    for (let j = i + 1; j < arr.length; j++) if (arr[i]! > arr[j]!) inv++;
   return inv % 2 === 0;
 }
 
@@ -46,7 +46,8 @@ export function SlidePuzzle({ onSolved }: { onSolved: () => void }) {
         const [r2, c2] = [Math.floor(blank / SIZE), blank % SIZE];
         if (Math.abs(r1 - r2) + Math.abs(c1 - c2) !== 1) return cur;
         const next = [...cur];
-        [next[idx], next[blank]] = [next[blank], next[idx]];
+        next[idx] = cur[blank]!;
+        next[blank] = cur[idx]!;
         setMoves((m) => m + 1);
         setStarted(true);
         return next;
