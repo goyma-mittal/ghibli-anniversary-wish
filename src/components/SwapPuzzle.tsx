@@ -33,21 +33,27 @@ export function SwapPuzzle({ onSolved }: { onSolved: () => void }) {
 
   const tap = useCallback(
     (idx: number) => {
-      setSelected((sel) => {
-        if (sel === null) return idx;
-        if (sel === idx) return null;
-        setOrder((cur) => {
-          const next = [...cur];
-          next[idx] = cur[sel]!;
-          next[sel] = cur[idx]!;
-          return next;
-        });
-        setMoves((m) => m + 1);
-        setStarted(true);
-        return null;
+      if (selected === null) {
+        setSelected(idx);
+        return;
+      }
+      if (selected === idx) {
+        setSelected(null);
+        return;
+      }
+      const sel = selected;
+      setOrder((cur) => {
+        const next = [...cur];
+        next[idx] = cur[sel]!;
+        next[sel] = cur[idx]!;
+        return next;
       });
+      setMoves((m) => m + 1);
+      setStarted(true);
+      setSelected(null);
     },
-    [],
+    [selected],
+
   );
 
   const reset = () => {
