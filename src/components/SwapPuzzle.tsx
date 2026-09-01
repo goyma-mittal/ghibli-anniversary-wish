@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useMemo, useState } from "react";
-import puzzleImage from "@/assets/ghibli-puzzle.jpg";
+import couplePhoto from "@/assets/couple-photo.jpg.asset.json";
 
 const SIZE = 3;
 const TILES = SIZE * SIZE;

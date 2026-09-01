@@ -2,7 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { useCallback, useState } from "react";
 import { SwapPuzzle } from "@/components/SwapPuzzle";
 import { Petals } from "@/components/Petals";
-import puzzleImage from "@/assets/ghibli-puzzle.jpg";
+import couplePhoto from "@/assets/couple-photo.jpg.asset.json";
 
 export const Route = createFileRoute("/puzzle")({
   head: () => ({
