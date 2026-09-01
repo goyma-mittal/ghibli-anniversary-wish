@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Petals } from "@/components/Petals";
-import puzzleImage from "@/assets/ghibli-puzzle.jpg";
+import anniversaryRings from "@/assets/anniversary-rings.jpg.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -34,8 +34,8 @@ function Landing() {
       <section className="animate-pop relative w-full max-w-sm text-center">
         <div className="card-soft mx-auto mb-8 w-52 rotate-[-3deg] rounded-[1.75rem] border-8 border-card bg-card p-0 overflow-hidden">
           <img
-            src={puzzleImage}
-            alt="Ghibli-style painting of a couple watching the sunset under a blossoming tree"
+            src={anniversaryRings.url}
+            alt="A couple's hands intertwined, showing their wedding and engagement rings"
             width={1024}
             height={1024}
             className="h-full w-full object-cover"
