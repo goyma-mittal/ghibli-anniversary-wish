@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useMemo, useState } from "react";
-import puzzleImage from "@/assets/ghibli-puzzle.jpg";
+import couplePhoto from "@/assets/couple-photo.jpg.asset.json";
 
 const SIZE = 3;
 const TILES = SIZE * SIZE;
@@ -82,7 +82,7 @@ export function SwapPuzzle({ onSolved }: { onSolved: () => void }) {
                     : "ring-1 ring-border"
               }`}
               style={{
-                backgroundImage: `url(${puzzleImage})`,
+                backgroundImage: `url(${couplePhoto.url})`,
                 backgroundSize: `${SIZE * 100}% ${SIZE * 100}%`,
                 backgroundPosition: `${(tile % SIZE) * 50}% ${
                   Math.floor(tile / SIZE) * 50
