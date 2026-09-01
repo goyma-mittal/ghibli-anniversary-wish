@@ -51,8 +51,8 @@ function PuzzlePage() {
           <section className="animate-pop card-soft rounded-3xl border-4 border-card bg-card/90 p-5 text-center backdrop-blur">
             <div className="relative mx-auto aspect-square w-full max-w-[22rem] overflow-hidden rounded-[2rem] border-4 border-card shadow-[var(--shadow-soft)]">
               <img
-                src={puzzleImage}
-                alt="Completed illustration of a couple watching the sunset beneath a blossoming tree"
+                src={couplePhoto.url}
+                alt="A couple dressed for celebration, standing together under sparkling lights"
                 width={1024}
                 height={1024}
                 className="h-full w-full object-cover"
